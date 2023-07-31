@@ -1,11 +1,14 @@
-import Tutorial1 from "@/components/Tutorial1";
+import Link from "next/link";
 
 const HomePage = () => {
   return (
-    <main className="flex items-center justify-center w-full h-screen bg-black">
-      <div className="flex items-center justify-center w-full h-screen">
-        <Tutorial1 />
-      </div>
+    <main className="flex flex-col items-center justify-center w-full h-screen gap-5 text-white bg-black">
+      <Link href="/css-3d" className="hover:underline">
+        Link to CSS-3D
+      </Link>
+      <Link href="/tutorial1" className="hover:underline">
+        Link to Tutorial 1
+      </Link>
     </main>
   );
 };

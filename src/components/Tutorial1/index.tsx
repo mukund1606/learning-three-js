@@ -1,6 +1,6 @@
 "use client";
 
-import { Canvas, useFrame, useLoader } from "@react-three/fiber";
+import { Canvas, useFrame, useLoader, useThree } from "@react-three/fiber";
 import { OrbitControls, Sphere, useHelper } from "@react-three/drei";
 import { MutableRefObject, useEffect, useRef, useState } from "react";
 import * as THREE from "three";
@@ -115,6 +115,8 @@ const Box2 = () => {
     "/stars.jpg",
     "/nebula.jpg",
   ]);
+  starsMap.encoding = THREE.SRGBColorSpace;
+  nebulaMap.encoding = THREE.SRGBColorSpace;
   return (
     <mesh
       position={[0, 5, 5]}
@@ -139,6 +141,21 @@ const Box2 = () => {
   );
 };
 
+const SceneTexture = () => {
+  const { scene } = useThree();
+  const cubeTexture = new THREE.CubeTextureLoader().load([
+    "/nebula.jpg",
+    "/nebula.jpg",
+    "/stars.jpg",
+    "/stars.jpg",
+    "/stars.jpg",
+    "/stars.jpg",
+  ]);
+  cubeTexture.colorSpace = THREE.SRGBColorSpace;
+  scene.background = cubeTexture;
+  return <></>;
+};
+
 const Tutorial1 = () => {
   return (
     <>
@@ -152,6 +169,8 @@ const Tutorial1 = () => {
         }}
         shadows
       >
+        <SceneTexture />
+        {/* <meshBasicMaterial attach="background" map={starsMap} /> */}
         {/* <axesHelper args={[50]} /> */}
         <ambientLight color={0x333333} intensity={20} />
         <DirLight />
