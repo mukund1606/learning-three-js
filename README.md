@@ -20,6 +20,10 @@
 - [Directional Ray Shadows](https://discourse.threejs.org/t/react-three-fiber-directional-light-dont-cast-proper-shadow/46208/3)
 - [Shadows Helper](https://stackoverflow.com/questions/69096623/react-three-fiber-how-do-i-create-a-helper-for-a-shadow-camera)
 
-### Day 2 (31st July) - Completed Tutorial 2
+### Day 2 (31st July) - Completed Tutorial 2 and 3
 
-[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/XXzqSAt3UIw/0.jpg)](http://www.youtube.com/watch?v=XXzqSAt3UIw)
+[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/XXzqSAt3UIw/0.jpg)](http://www.youtube.com/watch?v=XXzqSAt3UIw) 
+[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/GByT8ActvDk/0.jpg)](http://www.youtube.com/watch?v=GByT8ActvDk)
+
+#### Useful Links ->
+- [GLTF Animations](https://stackoverflow.com/questions/70566375/how-to-play-actions-in-a-threejs-object-loaded-with-usegltf-and-showed-with-rea)
