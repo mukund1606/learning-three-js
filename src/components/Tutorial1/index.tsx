@@ -5,9 +5,6 @@ import { OrbitControls, Sphere, useHelper } from "@react-three/drei";
 import { MutableRefObject, useEffect, useRef, useState } from "react";
 import * as THREE from "three";
 
-import stars from "./img/stars.jpg";
-import nebula from "./img/nebula.jpg";
-
 const Box = () => {
   const [isHovered, setIsHovered] = useState(false);
   const boxRef = useRef<THREE.Mesh>(null);
@@ -157,12 +154,25 @@ const SceneTexture = () => {
 };
 
 const Tutorial1 = () => {
+  const [width, setWidth] = useState(0);
+  const [height, setHeight] = useState(0);
+  useEffect(() => {
+    const handleResize = () => {
+      setWidth(window.innerWidth);
+      setHeight(window.innerHeight);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   return (
     <>
       <Canvas
         camera={{
           fov: 45,
-          aspect: window.innerWidth / window.innerHeight,
+          aspect: width / height,
           near: 0.1,
           far: 1000,
           position: [-10, 30, 30],
