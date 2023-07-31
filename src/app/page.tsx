@@ -24,6 +24,9 @@ const HomePage = () => {
       <Link href="/tutorial6" className="hover:underline">
         Link to Tutorial 6
       </Link>
+      <Link href="/tutorial7" className="hover:underline">
+        Link to Tutorial 7
+      </Link>
     </main>
   );
 };
