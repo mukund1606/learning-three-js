@@ -2,7 +2,7 @@ import "@/styles/3dbox.scss";
 
 const CSS3DPage = () => {
   return (
-    <div className="flex">
+    <div className="flex bg-black">
       <div className="flex items-center justify-center w-full h-screen main-container">
         <div className="scene">
           <div className="floor"></div>
