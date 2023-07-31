@@ -9,6 +9,9 @@ const HomePage = () => {
       <Link href="/tutorial1" className="hover:underline">
         Link to Tutorial 1
       </Link>
+      <Link href="/tutorial2" className="hover:underline">
+        Link to Tutorial 2
+      </Link>
     </main>
   );
 };
