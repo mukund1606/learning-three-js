@@ -1,15 +1,9 @@
 "use client";
 
-import { OrbitControls, useAnimations, useGLTF } from "@react-three/drei";
-import { Canvas, useFrame, useThree } from "@react-three/fiber";
-import { useEffect, useRef, useState } from "react";
+import { OrbitControls } from "@react-three/drei";
+import { Canvas, useFrame } from "@react-three/fiber";
+import { useEffect, useState } from "react";
 import * as THREE from "three";
-
-const SceneBackground = () => {
-  const { scene } = useThree();
-  scene.background = new THREE.Color(0xa3a3a3);
-  return <></>;
-};
 
 const Geometry = ({
   width,
@@ -102,7 +96,6 @@ const Tutorial4 = () => {
           uniforms.u_mouse.value.set(e.screenX / width, e.screenY / height);
         }}
       >
-        {/* <SceneBackground /> */}
         <Geometry
           width={width}
           height={height}

@@ -1,6 +1,10 @@
-import Tutorial4 from "@/components/Tutorial4";
+import dynamic from "next/dynamic";
 
-const Tutorial3Page = () => {
+const Tutorial4 = dynamic(() => import("@/components/Tutorial4"), {
+  ssr: false,
+});
+
+const Tutorial4Page = () => {
   return (
     <div className="flex items-center justify-center w-full h-screen bg-black">
       <Tutorial4 />
@@ -8,4 +12,4 @@ const Tutorial3Page = () => {
   );
 };
 
-export default Tutorial3Page;
+export default Tutorial4Page;

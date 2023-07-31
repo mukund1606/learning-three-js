@@ -1,6 +1,6 @@
 import Tutorial5 from "@/components/Tutorial5";
 
-const Tutorial3Page = () => {
+const Tutorial5Page = () => {
   return (
     <div className="flex items-center justify-center w-full h-screen bg-black">
       <Tutorial5 />
@@ -8,4 +8,4 @@ const Tutorial3Page = () => {
   );
 };
 
-export default Tutorial3Page;
+export default Tutorial5Page;
